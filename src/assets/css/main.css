@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../font/NotoSans.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../font/Poppins.ttf");
+}
+@layer components {
+  body {
+    background-color: #c2bcde;
+    font-family: "Noto Sans", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins, sans-serif";
+  }
+  .logo {
+    width: 102px;
+    height: 94px;
+  }
+  button {
+    background-color: #ebbf92;
+    color: #112c38;
+    padding: 12px 4rem;
+    border-radius: 25px;
+    font-family: "Poppins, sans-serif";
+    font-weight: bold;
+    max-width: 100%;
+    width: 304px;
+    height: 53px;
+    margin: 0 auto;
+    display: block;
+    transition: transform 300ms ease-in-out;
+  }
+  button:hover {
+    transform: scale(1.1);
+  }
+  .link {
+    position: relative;
+  }
+  .link::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #ffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+  }
+  .link:hover::after {
+    transform: scaleX(1);
+  }
+  .pdp {
+    margin-bottom: -69px;
+  }
+}
